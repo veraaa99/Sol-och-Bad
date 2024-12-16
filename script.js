@@ -1,14 +1,21 @@
 // Varukorgsfunktion
-const savedTrips = []
-let addToCart 
-let newTrip = ""
+let shoppingCart = document.querySelector('#cart')
+let heartButtons = document.querySelectorAll('svg')
 
-addToCart.addEventListener('change', e => {
-    if (e.target.checked) {
-        delete todos[newTrip]
-    } else {
-        savedTrips.push(newTrip)
+const testText = document.createElement("p")
+testText.innerText = "This is a paragraph";
+document.body.appendChild(testText);
+testText.style.display = "none"
+
+heartButtons.forEach(heart => {
+    heart.addEventListener('click', () => {
+        if (heart.querySelector('path').getAttribute("fill") === "black") {
+            heart.querySelector('path').setAttribute("fill", "red")
+            testText.style.display = "block"
+        } else {
+            heart.querySelector('path').setAttribute("fill", "black")
     }
+})
 })
 
 // Bokningsfunktion
