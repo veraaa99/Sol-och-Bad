@@ -1,0 +1,16 @@
+:root {
+  --clr-orange: #F35B04;
+  --clr-main-orange: #F18701;
+  --clr-yellow: #F7B801;
+  --clr-light-blue: #7678ED;
+  --clr-dark-blue: #3D348B;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  --clr-light-grey: #9B9B9B;
+  --clr-dark-grey: #555555;
+}
+
+.navbar {
+  background-color: var(--clr-main-orange);
+}
