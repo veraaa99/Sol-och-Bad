@@ -282,6 +282,34 @@ img {
   max-width: 500px;
 }
 
+.lightbox {
+  display: none;
+}
+
+.stars>img {
+  width: 21px;
+  height: 21px;
+}
+
+.add {
+  background: none;
+  border: none;
+}
+.add>svg {
+  width: 44px;
+  height: 41px;
+}
+
+.travel-card {
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.travel-img {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
 /* ABOUT SIDA */
 .faq-wrapper {
   background: var(--clr-main-orange);
