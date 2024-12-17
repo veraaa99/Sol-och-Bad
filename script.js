@@ -75,7 +75,7 @@ const subscribeBtn = document.getElementById('subscribeBtn');
       subscribeBtn.addEventListener('click', () => displaySubscribed(document));
     };
   
-  module.exports = {displaySubscribed};
+  module.exports = {displaySubscribed}; 
 
 
 // Filtrera
