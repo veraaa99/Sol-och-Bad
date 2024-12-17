@@ -14,17 +14,20 @@
 </head>
 <body>
   <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-lg justify-content-between px-4">
-    <div class="navbar-brand">
-      <img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo">
-    </div>
-    <ul class="navbar-nav align-items-center gap-3">
-      <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
-      <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
-      <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
-      <li class="nav-item active"><a href=""><img src="assets/icons/cart.svg" alt="Varukorg" class="nav-link cart" id="cart"></a></li>
-    </ul>
-  </nav>
+  <nav id="navigation" class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-brand"><a href="/"><img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo"></a></div>
+      <button class="navbar-toggler ms-auto me-4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto pe-4">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
+          <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
+        </ul>
+      </div>
+      <li class="nav-item active"><a class="position-relative" href=""><svg id="prick" class="position-absolute start-50 bottom-50 translate-middle" width="6" height="6" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#F50B0B"/></svg><img src="assets/icons/cart.svg" alt="Varukorg" class="nav-link cart" id="cart"></a></li>
+  </nav> 
   <main>
     <!-- Hero -->
     <section class="packages-hero hero-banner d-flex align-items-center justify-content-center">
@@ -45,25 +48,25 @@
         </div>
       </header>
       <!-- Cards -->
-      <div class="cards d-flex flex-column gap-2">
+      <div class="cards d-flex gap-2 mx-4 flex-wrap mb-4">
         <!-- Card 1 -->
         <div>
-          <div class="card d-flex align-items-center mx-3 p-2">
-            <img class="article-img" src="assets/images/paris.png" alt="Paris">
-            <div>
-              <h5 class="py-3">Paris</h5>
-              <p class="article-text text-center">2.999:-/2 dagar</p>
+          <div class="travel-card cards d-flex flex-column">
+            <img class="travel-img" src="assets/images/paris.png" alt="Paris">
+            <div class="d-flex  justify-content-between pt-3">
+              <h5>Paris</h5>
+              <p>2.999:-/2 dagar</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-            <div>
+            <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+            <div class="stars d-flex">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
             </div>
-            <div>
-              <button class="btn-main">Boka Nu</button>
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <button class="btn-main px-4 py-2">Boka Nu</button>
               <button class="add">
               <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_30_1494)">
@@ -79,7 +82,7 @@
             </div>
           </div>
           <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -89,7 +92,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -119,7 +122,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -141,7 +144,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -163,7 +166,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -178,21 +181,21 @@
         </div>
         <!-- Card 2 -->
          <div>
-          <div>
-            <img src="assets/images/swiss.png" alt="Schweiziska">
-            <div>
+          <div class="travel-card cards d-flex flex-column">
+            <img class="travel-img" src="assets/images/swiss.png" alt="Schweiziska">
+            <div class="d-flex justify-content-between pt-3">
               <h5>Schweiziska</h5>
               <p>3.229:-/3 dagar</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-            <div>
+            <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+            <div class="stars d-flex">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
               <img src="assets/icons/Star.svg" alt="">
             </div>
-            <div>
-              <button>Boka Nu</button>
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <button class="btn-main px-4 py-2">Boka Nu</button>
               <button class="add">
                 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_1494)">
@@ -208,7 +211,7 @@
             </div>
           </div>
           <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -218,7 +221,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -249,7 +252,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -271,7 +274,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -293,7 +296,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -308,20 +311,20 @@
          </div>
         <!-- Card 3 -->
          <div>
-           <div>
-             <img src="assets/images/thailand.png" alt="Thailand">
-             <div>
+           <div class="travel-card cards d-flex flex-column">
+             <img class="travel-img" src="assets/images/thailand.png" alt="Thailand">
+             <div class="d-flex justify-content-between pt-3">
                <h5>Thailand</h5>
                <p>2.899:-/3 dagar</p>
              </div>
-             <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-             <div>
+             <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+             <div class="stars d-flex">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
              </div>
-             <div>
-               <button>Boka Nu</button>
+             <div class="d-flex justify-content-between align-items-center pt-2">
+               <button class="btn-main px-4 py-2">Boka Nu</button>
                <button class="add">
                 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_1494)">
@@ -337,7 +340,7 @@
              </div>
            </div>
            <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -347,7 +350,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -378,7 +381,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -400,7 +403,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -422,7 +425,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -437,21 +440,21 @@
          </div>
         <!-- Card 4 -->
          <div>
-           <div>
-             <img src="assets/images/taiwan.png" alt="Taiwan">
-             <div>
+           <div class="travel-card cards d-flex flex-column">
+             <img class="travel-img" src="assets/images/taiwan.png" alt="Taiwan">
+             <div class="d-flex justify-content-between pt-3">
                <h5>Taiwan</h5>
                <p>2.899:-/3 dagar</p>
              </div>
-             <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-             <div>
+             <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+             <div class="stars d-flex">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
              </div>
-             <div>
-               <button>Boka Nu</button>
+             <div class="d-flex justify-content-between align-items-center pt-2">
+               <button class="btn-main px-4 py-2">Boka Nu</button>
                <button class="add">
                 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_1494)">
@@ -467,7 +470,7 @@
              </div>
            </div>
            <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -477,7 +480,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -508,7 +511,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -530,7 +533,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -552,7 +555,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -567,22 +570,22 @@
          </div>
         <!-- Card 5 -->
          <div>
-           <div>
-             <img src="assets/images/indonisia.png" alt="Indonesien">
-             <div>
+           <div class="travel-card cards d-flex flex-column">
+             <img class="travel-img" src="assets/images/indonisia.png" alt="Indonesien">
+             <div class="d-flex justify-content-between pt-3">
                <h5>Indonesien</h5>
                <p>5.899:-/3 dagar</p>
              </div>
-             <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-             <div>
+             <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+             <div class="stars d-flex">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
              </div>
-             <div>
-               <button>Boka Nu</button>
+             <div class="d-flex justify-content-between align-items-center pt-2">
+               <button class="btn-main px-4 py-2">Boka Nu</button>
                <button class="add">
                 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_1494)">
@@ -598,7 +601,7 @@
              </div>
            </div>
            <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -608,7 +611,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -639,7 +642,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <butto class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -661,7 +664,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -683,7 +686,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -698,19 +701,19 @@
          </div>
         <!-- Card 6 -->
          <div>
-           <div>
-             <img src="assets/images/singapore.png" alt="Singapore">
-             <div>
+           <div class="travel-card cards d-flex flex-column">
+             <img class="travel-img" src="assets/images/singapore.png" alt="Singapore">
+             <div class="d-flex justify-content-between pt-3">
                <h5>Singapore</h5>
                <p>4.899:-/4 dagar</p>
              </div>
-             <p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-             <div>
+             <p class="article-text mb-2">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+             <div class="stars d-flex">
                <img src="assets/icons/Star.svg" alt="">
                <img src="assets/icons/Star.svg" alt="">
              </div>
-             <div>
-               <button>Boka Nu</button>
+             <div class="d-flex justify-content-between align-items-center pt-2">
+               <button class="btn-main px-4 py-2">Boka Nu</button>
                <button class="add">
                 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_1494)">
@@ -726,7 +729,7 @@
              </div>
            </div>
            <!-- Responsive light box -->
-          <div>
+          <div class="lightbox">
             <!-- Content -->
             <div>
               <div>
@@ -736,7 +739,7 @@
               </div>
               <div>
                 <h3>Hotel Concortel</h3>
-                <div>
+                <div class="stars d-flex">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
                   <img src="assets/icons/Star.svg" alt="Stars">
@@ -767,7 +770,7 @@
                   </ul>
                   <div>
                     <span>1130 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 2 -->
@@ -789,7 +792,7 @@
                   </ul>
                   <div>
                     <span>2440 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                 <!-- Card 3 -->
@@ -811,7 +814,7 @@
                   </ul>
                   <div>
                     <span>1889 kr per natt</span>
-                    <button>Boka</button>
+                    <button class="btn-main px-4 py-2">Boka</button>
                   </div>
                  </div>
                </div>
@@ -826,7 +829,7 @@
          </div>
       </div>
       <!-- Button -->
-       <button>Utförska mer</button>
+       <button class="btn-main px-4 py-2 text-nowrap mx-auto">Utförska mer</button>
     </section>
     
   </main>
