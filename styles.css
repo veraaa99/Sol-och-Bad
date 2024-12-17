@@ -25,11 +25,17 @@ ul, ol, li {
   border-radius: 32px;
   border: none;
   max-width: 9rem;
-
+  
   a {
     text-decoration: none;
     color: var(--clr-white);
     font-weight: 500;
+  }
+
+  a:hover {
+    color: rgba(255, 255, 255, 0.699);
+    transition: .3s;
+    text-decoration: none;
   }
 
   .btn-arrow-icon {
@@ -43,10 +49,16 @@ ul, ol, li {
   border-radius: 16px;
   max-width: 15rem;
 
-    a {
+  a {
+    text-decoration: none;
+    color: var(--clr-white);
+    font-weight: 500;
+    transition: .3s;
+    }
+
+    a:hover {
+      color: rgba(255, 255, 255, 0.699);
       text-decoration: none;
-      color: var(--clr-white);
-      font-weight: 500;
     }
 
     .package-arrow-icon{
@@ -54,13 +66,32 @@ ul, ol, li {
     }
 }
 
+.btn-subscribe {
+  padding: 1em;
+  transition: .3s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.699);
+  }
+}
+
 .hero-btn {
+  background-color: var(--clr-main-orange);
+  color: var(--clr-white);
+  font-weight: 500;
+  border-radius: 32px;
+  border: none;
   padding-inline: 2.5em;
   padding-block: .5em;
   border-radius: 32px;
+  transition: .3s;
+
+  &:hover {
+      color: rgba(255, 255, 255, 0.699);
+    }
 
   @media (width < 992px) {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -149,6 +180,12 @@ img {
 
 .social-icon {
   max-width: 1.4rem;
+  cursor: pointer;
+  transition: .4s;
+
+  &:hover {
+    scale: 1.2;
+  }
 }
 
 .hero-about {
@@ -162,6 +199,7 @@ img {
 
 .footer-logo {
   max-width: 15rem;
+  cursor: pointer;
 }
 
 /*navbar*/
@@ -242,6 +280,12 @@ img {
   a{
     text-decoration: none;
     color: var(--clr-dark-grey);
+    transition: .3s;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: var(--clr-light-grey);
   }
 
   li {
@@ -275,7 +319,6 @@ img {
 
 .secondary-banner {
   background: url(assets/images/services.png)no-repeat center center;
-  height: 80vh;
   -webkit-background-size: cover; 
   -moz-background-size: cover; 
   -o-background-size: cover;
@@ -285,7 +328,6 @@ img {
     max-width: 5rem;
   }
 }
-
 
 /*service cards*/
 
@@ -298,7 +340,7 @@ img {
   @media (width > 768px) {
     padding: 1rem;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
@@ -320,7 +362,7 @@ img {
 
 .subscribe {
   background: linear-gradient(var(--clr-main-orange), var(--clr-orange));
-  height: 40vh;
+  height: 50vh;
 }
 
 .subscribe-wrap {
@@ -344,10 +386,6 @@ input:focus {
   outline: 1px solid var(--clr-dark-grey);
 }
 
-.btn-subscribe {
-  padding: .5em;
-}
-
 /*footer*/
 
 footer {
@@ -361,6 +399,15 @@ footer {
 .footer-wrapper {
   @media (width > 576px) {
     justify-content: space-between;
+  }
+
+  a {
+    transition: .3s;
+  }
+
+  a:hover {
+    color: var(--clr-light-blue);
+    text-decoration: none;
   }
 }
 
