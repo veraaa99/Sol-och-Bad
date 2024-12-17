@@ -42,38 +42,40 @@ module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
 // Bokningsfunktion
 
 // Formulär på frågesidan
-if (document.querySelector('#formBtn')) {
-    const formBtn = document.getElementById('formBtn');
-    formBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        displayThanks();
-        })
-};
-
-const displayThanks = function() {
-    const thanksText = document.createElement("p");
-    thanksText.innerText = "Tack för ditt meddelande, vi hör av oss!";
+function displayThanks(document) {
     const messageUs = document.getElementById('messageUs');
+    const thanksText = document.createElement('p');
+    thanksText.setAttribute('id', 'thankUser');
+    thanksText.innerText = "Tack för ditt meddelande, vi hör av oss!";
     messageUs.appendChild(thanksText);
-};
+    return true;
+  };
+  
+const formBtn = document.getElementById('formBtn');
+    if (formBtn) {
+        formBtn.addEventListener('click', () => displayThanks(document));
+    };
+  
+  module.exports = {displayThanks};
+  
 
 // FAQ (klicka på knapp så man ser svaret på frågan)
 
 // Prenumerera på nyhetsbrev
-// if (document.querySelector('#subscribeBtn')) {
-//     const formBtn = document.getElementById('subscribeBtn');
-//     formBtn.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         displayThanks();
-//         })
-// };
+function displaySubscribed(document) {
+    const subscribe = document.getElementById('subscribe');
+    const subscribedText = document.createElement('p');
+    subscribedText.innerText = "Välkommen! Du blir först med att ta del av nya och spännande erbjudanden.";
+    subscribe.appendChild(subscribedText);
+    return true;
+  };
 
-// const displaySubscribed = function() {
-//     const subscribedText = document.createElement("p");
-//     subscribedText.innerText = "Välkommen! Du blir först i att ta del av spännande erbjudaden.";
-//     const subscribe = document.getElementById('subscribe');
-//     subscribe.appendChild(subscribedText);
-// };
+const subscribeBtn = document.getElementById('subscribeBtn');
+    if (subscribeBtn) {
+      subscribeBtn.addEventListener('click', () => displaySubscribed(document));
+    };
+  
+  module.exports = {displaySubscribed};
 
 
 // Filtrera
