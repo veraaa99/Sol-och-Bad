@@ -14,43 +14,57 @@
 </head>
 <body>
   <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-lg justify-content-between px-4">
-    <div class="navbar-brand">
-      <img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo">
-    </div>
-    <ul class="navbar-nav align-items-center gap-3">
-      <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
-      <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
-      <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
+  <nav id="navigation" class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-brand"><a href="/"><img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo"></a></div>
+      <button class="navbar-toggler ms-auto me-4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto pe-4">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
+          <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
+        </ul>
+      </div>
       <li class="nav-item active"><a href=""><img src="assets/icons/cart.svg" alt="Varukorg" class="nav-link cart" id="cart"></a></li>
-    </ul>
-  </nav>
+  </nav> 
   <!-- Hero -->
-  <section>
-  <!-- Hero image / Add itt with css? -->
-  <img src="assets/images/about-image.jpg" alt="En strand med parasoller">
-  <h1>Om oss</h1>
+  <section class="p-5 text-center bg-image hero-about">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <h1 class="hero-heading about-heading">Om oss</h1>
+    </div>
   </section>
   <!-- About cards -->
-  <section>
-    <div>
-      <!-- Card 1 -->
-      <div>
-        <img src="assets/icons/about-1.svg" alt="">
-        <h3>Bakgrund</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+  <section class="values-wrapper">
+    <div class="card-group row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
+      <div class="col">
+        <div class="card h-100" id="value1">
+          <img src="assets/icons/about-1.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Bakgrund</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
       <!-- Card 2 -->
-      <div>
-        <img src="assets/icons/about-2.svg" alt="">
-        <h3>Vår vision</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/icons/about-2.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Vår vision</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, c non neque euismod porttitor. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
       <!-- Card 3 -->
-      <div>
-        <img src="assets/icons/heart.svg" alt="">
-        <h3>Kärnvärden</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/icons/heart.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Kärnvärden</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

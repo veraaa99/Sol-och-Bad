@@ -89,8 +89,12 @@ p {
     font-weight: bold;
 }
 
+.card-title {
+  text-align: center;
+}
 
-/*images*/
+
+/*IMAGES*/
 
 img { 
   width: 100%;
@@ -104,6 +108,15 @@ img {
 .article-img {
   border-radius: 8px;
   max-width: 27rem;
+}
+
+.hero-about {
+  background-image: url(assets/images/about-image.jpg);
+  height: 100vh;
+}
+
+.value-img {
+  max-width: 20%;
 }
 
 
@@ -170,6 +183,11 @@ img {
   max-width: 50ch;
 }
 
+.about-heading {
+  position: absolute;
+  text-shadow: 2px 3px 4px var(--clr-dark-grey);
+}
+
 .search-destinations {
   background-color: var(--clr-white);
   border-radius: 32px;
@@ -230,4 +248,21 @@ img {
 
 .article-text {
   max-width: 60ch;
+}
+
+/* CARDS */
+
+.values-wrapper {
+  margin: 3rem 4rem;
+  .card {
+    border: none;
+    font-size: 16px;
+  }
+  .card-title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  @media (width > 768px) {
+    margin: 7rem 4rem;
+  }
 }
