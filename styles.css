@@ -266,3 +266,18 @@ img {
     margin: 7rem 4rem;
   }
 }
+
+
+
+/* Packages page */
+.packages-hero {
+  background: url(assets/images/packages.png) no-repeat center center;
+}
+
+.filter {
+  max-width: 2rem;
+}
+
+.destination-header__title {
+  max-width: 500px;
+}
