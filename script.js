@@ -33,7 +33,7 @@ heartButtonsList.forEach(heart => {
 })
 
 // Export to test file
-module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
+// module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
 
 // Bokningsfunktion
 
@@ -48,11 +48,12 @@ function displayThanks(document) {
   };
   
 const formBtn = document.getElementById('formBtn');
+//If this button exists on the page, add event listener to that page
     if (formBtn) {
         formBtn.addEventListener('click', () => displayThanks(document));
     };
-  
-  module.exports = {displayThanks};
+//Export to test file, testing if a message is display when button is clicked
+//   module.exports = {displayThanks};
   
 
 // FAQ (klicka på knapp så man ser svaret på frågan)
@@ -67,11 +68,12 @@ function displaySubscribed(document) {
   };
 
 const subscribeBtn = document.getElementById('subscribeBtn');
+//If this button exists on the page, add event listener to that page
     if (subscribeBtn) {
       subscribeBtn.addEventListener('click', () => displaySubscribed(document));
     };
-  
-  module.exports = {displaySubscribed}; 
+//Export to test file, testing if a message is display when button is clicked
+//   module.exports = {displaySubscribed}; 
 
 
 // Filtrera

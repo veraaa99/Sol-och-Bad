@@ -309,3 +309,28 @@ img {
   border-radius: 8px;
   max-width: 100%;
 }
+
+/* ABOUT SIDA */
+.faq-wrapper {
+  background: var(--clr-main-orange);
+  background: linear-gradient(0deg, rgba(243,91,4,1) 0%, rgba(241,135,1,1) 75%);
+  padding-block: 3rem;
+}
+
+/* Accordion */
+.faq-header {
+  h2 {
+    font-weight: 600;
+  }
+  margin-inline: 5rem;
+  @media (width > 768px) {
+    margin-inline: 15rem;
+  }
+}
+
+.accordion-faq {
+  margin-inline: 3rem;
+  @media (width > 768px) {
+    margin-inline: 10rem;
+  }
+}
