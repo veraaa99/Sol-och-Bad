@@ -4,12 +4,6 @@ let notification = document.querySelector('circle')
 let heartButtonsImage = document.querySelectorAll('.heart')
 let heartButtonsList = Object.values(heartButtonsImage);
 
-// Placeholder text for notification function
-// const testText = document.createElement("p")
-// testText.innerText = "This is a paragraph";
-// document.body.appendChild(testText);
-// testText.style.display = "none"
-
 function checkSavedTrips(heart){
     return heart.querySelector('path').getAttribute("fill") === "black"
 }
