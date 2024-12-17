@@ -1,31 +1,79 @@
-// Varukorgsfunktion
-let shoppingCart = document.querySelector('#cart')
-let heartButtons = document.querySelectorAll('svg')
+// Shopping cart feature
+// Variables for shopping cart and list of all heart buttons (add to cart-buttons)
+let notification = document.querySelector('circle')
+let heartButtonsImage = document.querySelectorAll('.heart')
+let heartButtonsList = Object.values(heartButtonsImage);
 
-const testText = document.createElement("p")
-testText.innerText = "This is a paragraph";
-document.body.appendChild(testText);
-testText.style.display = "none"
+function checkSavedTrips(heart){
+    return heart.querySelector('path').getAttribute("fill") === "black"
+}
 
-heartButtons.forEach(heart => {
+showOrHideNotification()
+
+function showOrHideNotification() {
+    if(heartButtonsList.every(checkSavedTrips)){
+        notification.style.display = "none"
+        return false
+    } else {
+        notification.style.display = "block"
+        return true
+    }
+}
+
+heartButtonsList.forEach(heart => {
     heart.addEventListener('click', () => {
         if (heart.querySelector('path').getAttribute("fill") === "black") {
             heart.querySelector('path').setAttribute("fill", "red")
-            testText.style.display = "block"
+            showOrHideNotification()
         } else {
             heart.querySelector('path').setAttribute("fill", "black")
-    }
+            showOrHideNotification()
+        }
+    })
 })
-})
+
+// Export to test file
+// module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
 
 // Bokningsfunktion
 
 // Formulär på frågesidan
+function displayThanks(document) {
+    const messageUs = document.getElementById('messageUs');
+    const thanksText = document.createElement('p');
+    thanksText.setAttribute('id', 'thankUser');
+    thanksText.innerText = "Tack för ditt meddelande, vi hör av oss!";
+    messageUs.appendChild(thanksText);
+    return true;
+  };
+  
+const formBtn = document.getElementById('formBtn');
+//If this button exists on the page, add event listener to that page
+    if (formBtn) {
+        formBtn.addEventListener('click', () => displayThanks(document));
+    };
+//Export to test file, testing if a message is display when button is clicked
+//   module.exports = {displayThanks};
+  
 
 // FAQ (klicka på knapp så man ser svaret på frågan)
 
 // Prenumerera på nyhetsbrev
+function displaySubscribed(document) {
+    const subscribe = document.getElementById('subscribe');
+    const subscribedText = document.createElement('p');
+    subscribedText.innerText = "Välkommen! Du blir först med att ta del av nya och spännande erbjudanden.";
+    subscribe.appendChild(subscribedText);
+    return true;
+  };
 
+const subscribeBtn = document.getElementById('subscribeBtn');
+//If this button exists on the page, add event listener to that page
+    if (subscribeBtn) {
+      subscribeBtn.addEventListener('click', () => displaySubscribed(document));
+    };
+//Export to test file, testing if a message is display when button is clicked
+//   module.exports = {displaySubscribed}; 
 
 
 // Filtrera

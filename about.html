@@ -14,43 +14,57 @@
 </head>
 <body>
   <!-- Main Navbar -->
-  <nav class="navbar navbar-expand-lg justify-content-between px-4">
-    <div class="navbar-brand">
-      <img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo">
-    </div>
-    <ul class="navbar-nav align-items-center gap-3">
-      <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
-      <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
-      <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
+  <nav id="navigation" class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-brand"><a href="/"><img src="assets/icons/logo-white.svg" alt="Sol och Bad Logo" class="nav-logo"></a></div>
+      <button class="navbar-toggler ms-auto me-4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto pe-4">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Hem</a></li>
+          <li class="nav-item active"><a href="packages.html" class="nav-link">Charterresor</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">Om oss</a></li>
+        </ul>
+      </div>
       <li class="nav-item active"><a href=""><img src="assets/icons/cart.svg" alt="Varukorg" class="nav-link cart" id="cart"></a></li>
-    </ul>
-  </nav>
+  </nav> 
   <!-- Hero -->
-  <section>
-  <!-- Hero image / Add itt with css? -->
-  <img src="assets/images/about-image.jpg" alt="En strand med parasoller">
-  <h1>Om oss</h1>
+  <section class="p-5 text-center bg-image hero-about" aria-label="hero-about-us">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <h1 class="hero-heading about-heading">Om oss</h1>
+    </div>
   </section>
   <!-- About cards -->
-  <section>
-    <div>
-      <!-- Card 1 -->
-      <div>
-        <img src="assets/icons/about-1.svg" alt="">
-        <h3>Bakgrund</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+  <section class="values-wrapper" aria-label="values">
+    <div class="card-group row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/icons/about-1.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Bakgrund</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
       <!-- Card 2 -->
-      <div>
-        <img src="assets/icons/about-2.svg" alt="">
-        <h3>Vår vision</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/icons/about-2.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Vår vision</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, c non neque euismod porttitor. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
       <!-- Card 3 -->
-      <div>
-        <img src="assets/icons/heart.svg" alt="">
-        <h3>Kärnvärden</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+      <div class="col">
+        <div class="card h-100">
+          <img src="assets/icons/heart.svg" alt="" class="card-image-top value-img mx-auto">
+          <div class="card-body">
+            <h3 class="card-title">Kärnvärden</h3>
+            <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -67,91 +81,125 @@
       <span>Grundare Sol & Bad</span>
     </div>
   </section>
+  
+
   <!-- FAQ -->
-  <section>
-    <header>
-      <h2>FAQ</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
+  <section aria-label="FAQ" class="faq-wrapper gradient-custom">
+    <header class="faq-header text-center">
+      <h2 class="text-white display-2">FAQ</h2>
+      <p class="text-white my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
     </header>
-    <!-- Questions -->
-    <div>
+    <!-- Accordion -->
+    <div class="accordion accordion-faq" id="accordionExample">
       <!-- Question 1 -->
-      <div>
-        <!-- Question -->
-        <div>
-          <p>Lorem ipsum dolor sit amet?</p>
-          <span>
-            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5.23529 5.81921L10 1" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            data-mdb-collapse-init
+            class="accordion-button"
+            type="button"
+            data-mdb-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+          Lorem ipsum dolor sit amet?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-mdb-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
+          </div>
         </div>
-        <!-- Answer -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
       </div>
       <!-- Question 2 -->
-      <div>
-        <!-- Question -->
-        <div>
-          <p>Lorem ipsum dolor sit amet?</p>
-          <span>
-            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5.23529 5.81921L10 1" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            data-mdb-collapse-init
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+          Lorem ipsum dolor sit amet?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-mdb-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates facilis earum laudantium veritatis ut laborum adipisci aliquid totam, rem nisi modi amet quod velit cum?</p>
+          </div>
         </div>
-        <!-- Answer -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
       </div>
       <!-- Question 3 -->
-      <div>
-        <!-- Question -->
-        <div>
-          <p>Lorem ipsum dolor sit amet?</p>
-          <span>
-            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5.23529 5.81921L10 1" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button
+            data-mdb-collapse-init
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+          Lorem ipsum dolor sit amet?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-mdb-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, excepturi doloribus explicabo repellendus delectus vero accusamus ullam cumque accusantium. Porro possimus, impedit consectetur tenetur expedita a. Modi, fugit. Id distinctio totam in ipsa cum deserunt. Delectus harum accusamus aspernatur accusantium.</p>
+          </div>
         </div>
-        <!-- Answer -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
       </div>
       <!-- Question 4 -->
-      <div>
-        <!-- Question -->
-        <div>
-          <p>Lorem ipsum dolor sit amet?</p>
-          <span>
-            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5.23529 5.81921L10 1" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button
+            data-mdb-collapse-init
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+          >
+          Lorem ipsum dolor sit amet?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-mdb-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, excepturi doloribus explicabo repellendus delectus vero accusamus ullam cumque accusantium. Porro possimus, impedit consectetur tenetur expedita a. Modi, fugit. Id distinctio totam in ipsa cum deserunt. Delectus harum accusamus aspernatur accusantium.</p>
+          </div>
         </div>
-        <!-- Answer -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
       </div>
       <!-- Question 5 -->
-      <div>
-        <!-- Question -->
-        <div>
-          <p>Lorem ipsum dolor sit amet?</p>
-          <span>
-            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L5.23529 5.81921L10 1" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button
+            data-mdb-collapse-init
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseFive"
+          >
+          Lorem ipsum dolor sit amet?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-mdb-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, excepturi doloribus explicabo repellendus delectus vero accusamus ullam cumque accusantium. Porro possimus, impedit consectetur tenetur expedita a. Modi, fugit. Id distinctio totam in ipsa cum deserunt. Delectus harum accusamus aspernatur accusantium.</p>
+          </div>
         </div>
-        <!-- Answer -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla.</p>
       </div>
     </div>
   </section>
+  
+  
   <!-- Contact -->
   <section>
     <!-- Contact form -->
     <div>
-      <form>
+      <form id="messageUs">
         <!-- Name -->
         <div>
           <label for="name"></label>
@@ -173,7 +221,7 @@
           <input type="text" id="message" placeholder="Ditt meddelande">
         </div>
         <!-- Submit button -->
-         <button>Sicka meddelandet</button>
+         <button id="formBtn">Sicka meddelandet</button>
       </form>
     </div>
     <!-- Contact info -->
@@ -182,15 +230,15 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
       <ul>
         <li>
-          <img src="assets/icons/place.svg" alt="">
+          <img src="assets/icons/place.svg" alt="Location icon.">
           Krukmakargatan 30, Stockholm
         </li>
         <li>
-          <img src="assets/icons/mail.svg" alt="">
+          <img src="assets/icons/mail.svg" alt="Mail icon.">
           info@solbad.com
         </li>
         <li>
-          <img src="assets/icons/phone.svg" alt="">
+          <img src="assets/icons/phone.svg" alt="Phone icon.">
           +46 694 36 88 56
         </li>
       </ul>
@@ -209,15 +257,15 @@
       <ul>
         <h5>Kontaktinformation</h5>
         <li>
-          <img src="assets/icons/place.svg" alt="">
+          <img src="assets/icons/place.svg" alt="Location icon.">
           Krukmakargatan 30, Stockholm
         </li>
         <li>
-          <img src="assets/icons/mail.svg" alt="">
+          <img src="assets/icons/mail.svg" alt="Mail icon.">
           info@solbad.com
         </li>
         <li>
-          <img src="assets/icons/phone.svg" alt="">
+          <img src="assets/icons/phone.svg" alt="Phone icon.">
           +46 694 36 88 56
         </li>
       </ul>
