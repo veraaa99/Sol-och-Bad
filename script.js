@@ -1,14 +1,21 @@
 // Shopping cart feature
 // Variables for shopping cart and list of all heart buttons (add to cart-buttons)
 let notification = document.querySelector('circle')
-let heartButtonsImage = document.querySelectorAll('.heart')
+let heartButtonsImage = document.getElementsByClassName('heart')
 let heartButtonsList = Object.values(heartButtonsImage);
+let isNotificationAvaliable = true
 
 function checkSavedTrips(heart){
     return heart.querySelector('path').getAttribute("fill") === "black"
 }
 
-showOrHideNotification()
+if(notification === null){
+    isNotificationAvaliable = false
+}
+
+if (isNotificationAvaliable){
+    showOrHideNotification()
+}
 
 function showOrHideNotification() {
     if(heartButtonsList.every(checkSavedTrips)){
