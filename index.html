@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -29,15 +30,17 @@
       <li class="nav-item active"><a href=""><img src="assets/icons/cart.svg" alt="Varukorg" class="nav-link cart" id="cart"></a></li>
   </nav> 
   <main> 
+
      <!-- Hero -->
     <section>
       <div class="hero-banner d-flex align-items-center">
         <div class="hero-content d-flex flex-column align-flex-start">
           <h1 class="fw-bold hero-heading">Hitta din nästa semester</h1>
           <p class="hero-text fw-bold my-4">Upptäck en mängd charterresor, specialresor och familjepaket till ett rimligt pris, smidigt och säkert!</p>
+          
           <!-- Search bar -->
           <ul class="d-flex justify-content-between align-items-center search-destinations">
-            <li class="d-flex align-items-baseline ms-4">
+            <li class="d-flex align-items-baseline ms-lg-4">
               <a href="#" class="me-2 fw-bold">Destination</a>
               <img src="assets/icons/arrow-down.svg" alt="Illustration of an arrow" class="arrow-icon">
             </li>
@@ -54,50 +57,66 @@
               <img src="assets/icons/arrow-down.svg" alt="Illustration of an arrow" class="arrow-icon">
             </li>
             <li><button class="btn-main hero-btn ms-auto">Sök</button></li>
-          </ul>
+          </ul> 
+          
+          
         </div>
       </div>
     </section>
+
     <!-- Offers -->
-     <section class="d-flex flex-column align-items-center mb-5">
-      <header class="text-center my-5 mx-2">
+     <section class="d-flex flex-column align-items-center mb-5 container">
+      <header class="text-center my-5">
         <h2 class="fw-bold m-4">Boka din drömresa snabbt och enkelt</h2>
         <p>Utforska våra erbjudanden och paket till populära resmål</p>
       </header>
+
       <!-- Carousel -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active"  data-bs-interval="10000">
-            <img class="d-block w-100 slide-img" src="assets/images/offers-card-1.png" alt="First slide">
-            <h5 class="text-center mt-3">Familepaket, Bali</h5>
-            <p class="text-center">Upptäck vackra miljöer i Bali, ett mycket populärt resmål för hela familjen! </p>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100 slide-img" src="assets/images/offers-card-2.png" alt="Second slide">
-            <h5 class="text-center mt-3">Smekmånad, Hawaii</h5>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nostrum harum corporis mollitia nesciunt iure?</p>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100 slide-img" src="assets/images/offers-card-3.png" alt="Third slide">
-            <h5 class="text-center mt-3">Familepaket, Kanarieöarna</h5>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, consequuntur.</p>
+       <div class="container d-flex justify-content-center">
+        <div class="test">
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/images/offers-card-1.png" alt="Los Angeles" class="d-block w-100 slide-img">
+                <div class="carousel-caption">
+                  <h3 class="slider-heading">Familesemester, Bali</h3>
+                  <p class="slider-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, rerum?</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/images/offers-card-2.png" alt="Los Angeles" class="d-block w-100 slide-img">
+                <div class="carousel-caption">
+                  <h3 class="slider-heading">Yogaresa, Hawaii</h3>
+                  <p class="slider-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, rerum?</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/images/offers-card-3.png" alt="Los Angeles" class="d-block w-100 slide-img">
+                <div class="carousel-caption">
+                  <h3 class="slider-heading">All inclusive, Kanarieöarna</h3>
+                  <p class="slider-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, rerum?</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div> 
-      <!-- Offers Button -->
+      </div>
+
        <button class="btn-packages px-4 py-2 my-3 d-flex align-items-center">
         <a href="packages.html">
           Se alla erbjdanden och paket
@@ -105,15 +124,16 @@
         <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="package-arrow-icon">
        </button>
      </section>
+
      <!-- Services -->
       <section>
          <div class="secondary-banner my-5">
           <div class="text-center">
             <h2 class="secondary-heading pt-5">Våra löften</h2>
-            <p class="secondary-text">Vi på Sol & Bad vill ge dig den mest bekväma bokningsupplevelsen</p>
+            <p class="secondary-text py-4">Vi på Sol & Bad vill ge dig den mest bekväma bokningsupplevelsen</p>
           </div>
-          <!-- Services cards -->
-          <div class="usp-cards d-flex flex-column flex-md-row align-items-center gap-3">
+
+          <div class="usp-cards d-flex flex-column flex-md-row align-items-center gap-3 px-3">
             <div class="usp d-flex h-100 col-md-3">
               <img src="assets/icons/services-1.svg" alt="Kundsupport icon" class="secondary-icon me-3 mt-md-4">
               <div class="flex-column">
@@ -138,98 +158,116 @@
           </div>
       </div>
       </section>
+
       <!-- Articles -->
        <section>
-         <div class="cards d-flex flex-column gap-2">
-          <div class="card d-flex align-items-center mx-3 p-2">
-            <img src="assets/images/articles-1.jpg" alt="En man som ska åka skidor" class="article-img">
-              <h5 class="py-3">Skidresa - Vinterns bästa resemål!</h5>
-              <p class="article-text text-center">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-            <button class="btn-main">
-              <a href="#" class="d-flex justify-content-center p-2 gap-2">
-                Läs mer
-                <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon">
-              </a>
-            </button>
-          </div>
-          <div class="card d-flex align-items-center mx-3 p-2">
-            <img src="assets/images/articles-2.jpg" alt="En strand" class="article-img">
-              <h5 class="py-3">Ön du drömmer om att uppleva!</h5>
-              <p class="article-text text-center">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-            <button class="btn-main">
-              <a href="#" class="d-flex justify-content-center p-2 gap-2">
-                Läs mer
-                <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon">
-              </a>
-            </button>
-          </div>
-          <div class="card d-flex align-items-center mx-3 p-3">
-            <img src="assets/images/articles-3.jpg" alt="En hotell"class="article-img">
-              <h5 class="py-3">All inclusive - Kanarieöarna</h5>
-              <p class="article-text text-center">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
-            <button class="btn-main">
-              <a href="#" class="d-flex justify-content-center p-2 gap-2">
-                Läs mer
-                <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon" >
-              </a>
-            </button>
+         <div class="container gap-3 mb-5">
+          <div class="cards d-flex flex-column flex-md-row gap-3">
+
+            <div class="card align-items-center border-top-0 pb-4 mx-3 text-center">
+              <div class="test">
+                <img src="assets/images/articles-1.jpg" alt="En man som ska åka skidor" class="rounded-top">
+              </div>
+                <h5 class="py-3 px-3">Skidresa - Vinterns bästa resemål!</h5>
+                <p class="px-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+                  <button class="btn-main">
+                <a href="#" class="d-flex justify-content-center p-2 gap-2">
+                  Läs mer
+                  <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon">
+                </a>
+              </button>
+            </div>
+
+            <div class="card align-items-center border-top-0 pb-4 mx-3 text-center">
+              <div class="test">
+                <img src="assets/images/articles-2.jpg" alt="En strand" class="rounded-top">
+              </div>
+                <h5 class="py-3 px-3">Ön du drömmer om att uppleva!</h5>
+                <p class="px-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+              <button class="btn-main">
+                <a href="#" class="d-flex justify-content-center p-2 gap-2">
+                  Läs mer
+                  <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon">
+                </a>
+              </button>
+            </div>
+
+            <div class="card align-items-center border-top-0 pb-4 mx-3 text-center">
+              <div class="test">
+                <img src="assets/images/articles-3.jpg" alt="En hotell"class="rounded-top">
+              </div>
+                <h5 class="py-3 px-3">All inclusive - Kanarieöarna</h5>
+                <p class="px-3">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore</p>
+              <button class="btn-main">
+                <a href="#" class="d-flex justify-content-center p-2 gap-2">
+                  Läs mer
+                  <img src="assets/icons/arrow-right.png" alt="Illustration of an arrow" class="btn-arrow-icon" >
+                </a>
+              </button>
+            </div>
+
           </div>
         </div>
        </section>
+
        <!-- Newsletter -->
-        <section>
-          <h2>Håll dig uppdaterad</h2>
-          <p>Missa inte våra fantastiska erbjudanden, resetips och härliga inspiration genom att prenumerera via e-post.</p>
-          <!-- Newsletter input -->
-          <div>
-            <input type="email" placeholder="E-postadress">
-            <button type="submit">Prenumerera</button>
-          </div>
+        <section class="subscribe d-flex flex-column align-items-center justify-content-center px-2 text-center my-4">
+          <h2 class="subscribe-heading">Håll dig uppdaterad</h2>
+          <p class="subscribe-text py-3">Missa inte våra fantastiska erbjudanden, resetips och härliga inspiration genom att prenumerera via e-post.</p>
+
+          <form class="subscribe-wrap rounded-pill">
+              <input type="email" placeholder="E-postadress" class="ps-4">
+              <button type="submit" class="btn-main btn-subscribe">Prenumerera</button>
+          </form>
         </section>
    </main>
-   <!-- Site footer -->
-   <Footer>
-    <!-- Branding -->
-    <div>
-      <img src="assets/icons/logo-orange.svg" alt="Sol och Bad Logo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+
+  <Footer>
+    <div class="container d-flex flex-column flex-md-row gap-2 footer-wrapper py-4">
+      <div class="d-flex flex-column col-md-3">
+        <img src="assets/icons/logo-orange.svg" alt="Sol och Bad Logo" class="footer-logo mb-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+      </div>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Kontaktinformation</h5>
+          <li class="d-flex">
+            <img src="assets/icons/place.svg" alt="Illustration of a map finder" class="contact-icon me-2">
+            Krukmakargatan 30, Stockholm
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/mail.svg" alt="Illustration of an envelope" class="contact-icon me-2">
+            info@solbad.com
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/phone.svg" alt="Illustration of a phone" class="contact-icon me-2">
+            +46 694 36 88 56
+          </li>
+        </ul>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Länkar</h5>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="packages.html">Charterresor</a></li>
+          <li><a href="about.html">Om oss</a></li>
+        </ul>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Följ oss</h5>
+          <div class="d-flex gap-2 align-items-center">
+            <li><img src="assets/icons/facebook.svg" alt="Facebook icon" class="social-icon"></li>
+            <li><img src="assets/icons/instagram.svg" alt="Instagram icon" class="social-icon"></li>
+            <li><img src="assets/icons/youtube.svg" alt="Youtube icon" class="social-icon"></li>
+          </div>
+        </ul>
     </div>
-    <!-- Footer content -->
-    <div>
-      <!-- Contact info -->
-      <ul>
-        <h5>Kontaktinformation</h5>
-        <li>
-          <img src="assets/icons/place.svg" alt="">
-          Krukmakargatan 30, Stockholm
-        </li>
-        <li>
-          <img src="assets/icons/mail.svg" alt="">
-          info@solbad.com
-        </li>
-        <li>
-          <img src="assets/icons/phone.svg" alt="">
-          +46 694 36 88 56
-        </li>
-      </ul>
-      <!-- Links -->
-      <ul>
-        <h5>Länkar</h5>
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="packages.html">Charterresor</a></li>
-        <li><a href="about.html">Om oss</a></li>
-      </ul>
-      <!-- Social media -->
-       <ul>
-        <h5>Följ oss</h5>
-        <li><img src="assets/icons/facebook.svg" alt="Facebook icon"></li>
-        <li><img src="assets/icons/instagram.svg" alt="Instagram icon"></li>
-        <li><img src="assets/icons/youtube.svg" alt="Youtube icon"></li>
-       </ul>
-    </div>
-   </Footer>
+  </Footer>
+
    <!-- Copyright -->
-   <p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+    <div class="copyright text-center d-flex align-items-center justify-content-center p-2">
+      <p class="copyright-text">Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
