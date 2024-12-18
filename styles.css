@@ -469,9 +469,12 @@ footer {
 
 /* Packages page */
 .packages-hero {
-  background: url(assets/images/packages.png) no-repeat;
-  width: 100vw;
-  height: 100vh;
+  background: url(assets/images/packages.png) no-repeat center center;
+  height: 80vh;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+  background-size: cover;
   
 }
 
