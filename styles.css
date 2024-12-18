@@ -159,6 +159,11 @@ img {
   display: block;
 }
 
+.prick{
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
 .arrow-icon {
   max-width: .5rem;
 }

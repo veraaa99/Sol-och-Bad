@@ -1,6 +1,6 @@
 // Shopping cart feature
 // Variables for shopping cart and list of all heart buttons (add to cart-buttons)
-let notification = document.querySelector('circle')
+let notification = document.getElementsByClassName("prick")
 let heartButtonsImage = document.getElementsByClassName('heart')
 let heartButtonsList = Object.values(heartButtonsImage);
 let isNotificationAvaliable = true
@@ -19,10 +19,14 @@ if (isNotificationAvaliable){
 
 function showOrHideNotification() {
     if(heartButtonsList.every(checkSavedTrips)){
-        notification.style.display = "none"
+        for(var i = 0; i < notification.length; i = i + 1) {
+            notification[i].style.display="none";
+        }
         return false
     } else {
-        notification.style.display = "block"
+        for(var i = 0; i < notification.length; i = i + 1) {
+            notification[i].style.display="block";
+        }
         return true
     }
 }
@@ -40,7 +44,7 @@ heartButtonsList.forEach(heart => {
 })
 
 // Export to test file
-// module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
+module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
 
 // Bokningsfunktion
 
