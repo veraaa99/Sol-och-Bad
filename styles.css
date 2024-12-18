@@ -25,6 +25,11 @@ ul, ol, li {
   border-radius: 32px;
   border: none;
   max-width: 9rem;
+  transition: .3s;
+
+  &:hover {
+      color: rgba(255, 255, 255, 0.699);
+    }
   
   a {
     text-decoration: none;
@@ -427,6 +432,7 @@ footer {
 
   a {
     transition: .3s;
+    text-decoration: none;
   }
 
   a:hover {
