@@ -95,6 +95,22 @@ ul, ol, li {
   }
 }
 
+.btn-form {
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+  font-weight: 500;
+  border-radius: 32px;
+  border: none;
+  padding-inline: 2.5em;
+  padding-block: .5em;
+  border-radius: 32px;
+  transition: .3s;
+
+  &:hover {
+      color: rgba(255, 255, 255, 0.699);
+    }
+}
+
 /*fonts*/
 
 p {
@@ -152,6 +168,12 @@ p {
   font-weight: 400;
 }
 
+.contact-heading{
+  font-size: 3.75rem;
+  color: var(--clr-dark-blue);
+  font-weight: 500;
+}
+
 /*images and icons*/
 
 img { 
@@ -190,7 +212,7 @@ img {
 
 .hero-about {
   background-image: url(assets/images/about-image.jpg);
-  height: 100vh;
+  height: 80vh;
 }
 
 .value-img {
@@ -200,6 +222,16 @@ img {
 .footer-logo {
   max-width: 15rem;
   cursor: pointer;
+}
+
+.qutation-img {
+  max-width: 5rem;
+}
+
+.founder-img{
+  max-width: 35rem;
+  height: 100%;
+  width: 100%;
 }
 
 /*navbar*/
@@ -437,7 +469,10 @@ footer {
 
 /* Packages page */
 .packages-hero {
-  background: url(assets/images/packages.png) no-repeat center center;
+  background: url(assets/images/packages.png) no-repeat;
+  width: 100vw;
+  height: 100vh;
+  
 }
 
 .filter {
@@ -448,8 +483,30 @@ footer {
   max-width: 500px;
 }
 
-.lightbox {
-  display: none;
+.packages-cards {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-inline: 2rem;
+  max-width: 100%;
+
+  @media (width < 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (width < 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.travel-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  overflow: hidden;
+
+  .travel-img {
+    width: 100%;
+  }
 }
 
 .stars>img {
@@ -466,14 +523,23 @@ footer {
   height: 41px;
 }
 
-.travel-card {
-  min-width: 300px;
-  max-width: 450px;
+.more-btn {
+  margin-block: 3rem;
 }
 
-.travel-img {
-  border-radius: 8px;
-  max-width: 100%;
+/* Lightbox */
+.lightbox {
+  display: none;
+  
+}
+.lightbox-btn {
+  position: absolute;
+}
+.room-cards {
+}
+.room-cards__icon {
+  width: 1.2rem;
+  max-height: 1.2rem;
 }
 
 /* ABOUT SIDA */
@@ -498,5 +564,31 @@ footer {
   margin-inline: 3rem;
   @media (width > 768px) {
     margin-inline: 10rem;
+  }
+}
+
+.form {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+
+  textarea {
+    border: none;
+    outline: none;
+    height: 8em;
+    width: 100%;
+    resize: both;
+    overflow: auto;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* Prevent line breaks */
+    border: 0;
   }
 }

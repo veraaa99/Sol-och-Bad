@@ -38,7 +38,7 @@
   <section class="values-wrapper" aria-label="values">
     <div class="card-group row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
       <div class="col">
-        <div class="card h-100">
+        <div class="card h-100 p-3">
           <img src="assets/icons/about-1.svg" alt="" class="card-image-top value-img mx-auto">
           <div class="card-body">
             <h3 class="card-title">Bakgrund</h3>
@@ -48,7 +48,7 @@
       </div>
       <!-- Card 2 -->
       <div class="col">
-        <div class="card h-100">
+        <div class="card h-100 p-3">
           <img src="assets/icons/about-2.svg" alt="" class="card-image-top value-img mx-auto">
           <div class="card-body">
             <h3 class="card-title">Vår vision</h3>
@@ -58,7 +58,7 @@
       </div>
       <!-- Card 3 -->
       <div class="col">
-        <div class="card h-100">
+        <div class="card h-100 p-3">
           <img src="assets/icons/heart.svg" alt="" class="card-image-top value-img mx-auto">
           <div class="card-body">
             <h3 class="card-title">Kärnvärden</h3>
@@ -71,14 +71,18 @@
   <!-- About us -->
   <section>
     <!-- About image -->
-    <img src="assets/images/about-person.png" alt="Grundaren av Sol och Bad: Siti Sarah">
+     <div class="d-flex flex-column flex-md-row justify-content-md-evenly container gap-4 my-5">
+      <div class="d-flex align-items-md-center">
+        <img src="assets/images/about-person.png" alt="Grundaren av Sol och Bad: Siti Sarah" class="founder-img">
+      </div>
     <!-- About text -->
-    <div>
-      <img src="assets/icons/quotation.svg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Vivamus at augue interdum, blandit arcu quis, laoreet ipsum. In eu ipsum urna. Suspendisse suscipit est et neque.</p>
-      <p>Mauris tempor tellus ante, ut fermentum erat gravida vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec justo dui. Ut et consequat dui, a malesuada ipsum. Pellentesque nec turpis viverra, blandit mi a, accumsan justo.</p>
-      <p>Siti Sarah</p>
-      <span>Grundare Sol & Bad</span>
+      <div class="col-md-5">
+        <img src="assets/icons/quotation.svg" alt="Illustration of quotation marks" class="qutation-img mb-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna tincidunt fringilla. Vivamus at augue interdum, blandit arcu quis, laoreet ipsum. In eu ipsum urna. Suspendisse suscipit est et neque.</p>
+        <p>Mauris tempor tellus ante, ut fermentum erat gravida vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec justo dui. Ut et consequat dui, a malesuada ipsum. Pellentesque nec turpis viverra, blandit mi a, accumsan justo.</p>
+        <p>Siti Sarah</p>
+        <span>Grundare Sol & Bad</span>
+      </div>
     </div>
   </section>
   
@@ -206,53 +210,57 @@
   
   
   <!-- Contact -->
-  <section>
+  <section class="py-5">
     <!-- Contact form -->
-    <div>
-      <form id="messageUs">
-        <!-- Name -->
-        <div>
-          <label for="name"></label>
-          <input type="text" id="name" placeholder="Ditt Namn">
+     <div class="container d-flex flex-column flex-lg-row justify-content-evenly">
+      <div class="form d-flex col-md-10 col-lg-4">
+        <form id="messageUs" class="w-100">
+          <!-- Name -->
+          <div class="border rounded my-2 p-1">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Ditt Namn">
+          </div>
+          <!-- E-mail -->
+          <div class="border rounded my-2 p-1">
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="e-post">
+          </div>
+          <!-- Subject -->
+          <div class="border rounded my-2 p-1">
+            <label for="subject"></label>
+            <input type="text" id="subject" placeholder="Ämnet">
+          </div>
+          <!-- Message -->
+          <div class="border rounded my-2">
+            <label for="message" class="sr-only">Message</label>
+            <textarea type="text" id="message" placeholder="Ditt meddelande" class="p-1"></textarea>
+          </div>
+          <!-- Submit button -->
+          <button id="formBtn" class="btn-form mt-3">Sicka meddelandet</button>
+        </form>
+      </div>
+      <!-- Contact info -->
+      <div class="d-flex ps-4 pt-4 col-lg-5 flex-column flex-md-row flex-lg-column gap-4">
+        <div class="col-md-6 col-lg-10">
+          <h2 class="contact-heading">Kontakta oss</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
         </div>
-        <!-- E-mail -->
-        <div>
-          <label for="email"></label>
-          <input type="email" id="email" placeholder="e-post">
-        </div>
-        <!-- Subject -->
-        <div>
-          <label for="subject"></label>
-          <input type="text" id="subject" placeholder="Ämnet">
-        </div>
-        <!-- Message -->
-        <div>
-          <label for="message"></label>
-          <input type="text" id="message" placeholder="Ditt meddelande">
-        </div>
-        <!-- Submit button -->
-         <button id="formBtn">Sicka meddelandet</button>
-      </form>
+        <ul class="d-flex p-0 gap-4 flex-column justify-content-md-center">
+          <li class="d-flex">
+            <img src="assets/icons/place.svg" alt="Location icon." class="contact-icon me-2">
+            Krukmakargatan 30, Stockholm
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/mail.svg" alt="Mail icon." class="contact-icon me-2">
+            info@solbad.com
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/phone.svg" alt="Phone icon." class="contact-icon me-2">
+            +46 694 36 88 56
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- Contact info -->
-     <div>
-      <h2>Kontakta oss</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-      <ul>
-        <li>
-          <img src="assets/icons/place.svg" alt="Location icon." class="contact-icon">
-          Krukmakargatan 30, Stockholm
-        </li>
-        <li>
-          <img src="assets/icons/mail.svg" alt="Mail icon." class="contact-icon">
-          info@solbad.com
-        </li>
-        <li>
-          <img src="assets/icons/phone.svg" alt="Phone icon." class="contact-icon">
-          +46 694 36 88 56
-        </li>
-      </ul>
-     </div>
   </section>
   <Footer>
     <div class="container d-flex flex-column flex-md-row gap-2 footer-wrapper py-4">
