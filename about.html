@@ -240,63 +240,65 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
       <ul>
         <li>
-          <img src="assets/icons/place.svg" alt="Location icon.">
+          <img src="assets/icons/place.svg" alt="Location icon." class="contact-icon">
           Krukmakargatan 30, Stockholm
         </li>
         <li>
-          <img src="assets/icons/mail.svg" alt="Mail icon.">
+          <img src="assets/icons/mail.svg" alt="Mail icon." class="contact-icon">
           info@solbad.com
         </li>
         <li>
-          <img src="assets/icons/phone.svg" alt="Phone icon.">
+          <img src="assets/icons/phone.svg" alt="Phone icon." class="contact-icon">
           +46 694 36 88 56
         </li>
       </ul>
      </div>
   </section>
-  <!-- Site footer -->
   <Footer>
-    <!-- Branding -->
-    <div>
-      <img src="assets/icons/logo-orange.svg" alt="Sol och Bad Logo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
-    </div>
-    <!-- Footer content -->
-    <div>
-      <!-- Contact info -->
-      <ul>
-        <h5>Kontaktinformation</h5>
-        <li>
-          <img src="assets/icons/place.svg" alt="Location icon.">
-          Krukmakargatan 30, Stockholm
-        </li>
-        <li>
-          <img src="assets/icons/mail.svg" alt="Mail icon.">
-          info@solbad.com
-        </li>
-        <li>
-          <img src="assets/icons/phone.svg" alt="Phone icon.">
-          +46 694 36 88 56
-        </li>
-      </ul>
-      <!-- Links -->
-      <ul>
-        <h5>Länkar</h5>
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="packages.html">Charterresor</a></li>
-        <li><a href="about.html">Om oss</a></li>
-      </ul>
-      <!-- Social media -->
-        <ul>
-        <h5>Följ oss</h5>
-        <li><img src="assets/icons/facebook.svg" alt="Facebook icon"></li>
-        <li><img src="assets/icons/instagram.svg" alt="Instagram icon"></li>
-        <li><img src="assets/icons/youtube.svg" alt="Youtube icon"></li>
+    <div class="container d-flex flex-column flex-md-row gap-2 footer-wrapper py-4">
+      <div class="d-flex flex-column col-md-3 p-0">
+        <img src="assets/icons/logo-orange.svg" alt="Sol och Bad Logo" class="footer-logo mb-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.</p>
+      </div>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Kontaktinformation</h5>
+          <li class="d-flex">
+            <img src="assets/icons/place.svg" alt="Illustration of a map finder" class="contact-icon me-2">
+            Krukmakargatan 30, Stockholm
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/mail.svg" alt="Illustration of an envelope" class="contact-icon me-2">
+            info@solbad.com
+          </li>
+          <li class="d-flex">
+            <img src="assets/icons/phone.svg" alt="Illustration of a phone" class="contact-icon me-2">
+            +46 694 36 88 56
+          </li>
+        </ul>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Länkar</h5>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="packages.html">Charterresor</a></li>
+          <li><a href="about.html">Om oss</a></li>
+        </ul>
+
+        <ul class="d-flex flex-column gap-2 p-0">
+          <h5>Följ oss</h5>
+          <div class="d-flex gap-2 align-items-center">
+            <li><img src="assets/icons/facebook.svg" alt="Facebook icon" class="social-icon"></li>
+            <li><img src="assets/icons/instagram.svg" alt="Instagram icon" class="social-icon"></li>
+            <li><img src="assets/icons/youtube.svg" alt="Youtube icon" class="social-icon"></li>
+          </div>
         </ul>
     </div>
   </Footer>
-  <!-- Copyright -->
-  <p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+
+   <!-- Copyright -->
+    <div class="copyright text-center d-flex align-items-center justify-content-center p-2">
+      <p class="copyright-text">Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+    </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
