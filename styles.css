@@ -576,7 +576,7 @@ footer {
     outline: none;
     height: 8em;
     width: 100%;
-    resize: both;
+    resize: vertical;
     overflow: auto;
   }
 

@@ -91,3 +91,10 @@ const subscribeBtn = document.getElementById('subscribeBtn');
 // Favoriter
 
 // Modal popup 
+const bookingBtn = document.querySelector('#bookingBtn');
+bookingBtn.addEventListener('click', bookingForm)
+
+function bookingForm() {
+    const modal = new bootstrap.Modal(document.getElementById('myModal'));
+    modal.show();
+}
