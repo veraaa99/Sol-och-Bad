@@ -55,32 +55,52 @@ function displayThanks(document) {
   };
   
 const formBtn = document.getElementById('formBtn');
-//If this button exists on the page, add event listener to that page
     if (formBtn) {
-        formBtn.addEventListener('click', () => displayThanks(document));
+        formBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            displayThanks(document);
+        })
     };
-//Export to test file, testing if a message is display when button is clicked
-//   module.exports = {displayThanks};
   
 
 // FAQ (klicka på knapp så man ser svaret på frågan)
 
 // Prenumerera på nyhetsbrev
-function displaySubscribed(document) {
-    const subscribe = document.getElementById('subscribe');
-    const subscribedText = document.createElement('p');
-    subscribedText.innerText = "Välkommen! Du blir först med att ta del av nya och spännande erbjudanden.";
-    subscribe.appendChild(subscribedText);
-    return true;
-  };
+const subscribeSec = document.getElementById('subscribed');
+let subscribedText;
+let sent = false;
 
-const subscribeBtn = document.getElementById('subscribeBtn');
-//If this button exists on the page, add event listener to that page
-    if (subscribeBtn) {
-      subscribeBtn.addEventListener('click', () => displaySubscribed(document));
-    };
-//Export to test file, testing if a message is display when button is clicked
-//   module.exports = {displaySubscribed}; 
+function displaySubscribed() {
+  if (subscribeSec) {
+    subscribedText = document.createElement('p');
+    subscribedText.setAttribute('class', 'subscribe-text py-1 m-0');
+    subscribedText.setAttribute('id', 'subscribedMsg');
+    subscribedText.innerText = "Välkommen! Du blir först med att ta del av nya och spännande erbjudanden.";
+    subscribeSec.appendChild(subscribedText);
+    sent = true;
+  }
+}
+
+function setupButtonListener() {
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  if (subscribeBtn) {
+    subscribeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!sent) {
+        sent = true;
+        displaySubscribed();
+      }
+    });
+  }
+}
+
+setupButtonListener()
+
+function getSent() {
+  return sent; // Return the current value of sent
+}
+
+module.exports = { setupButtonListener, getSent };
 
 
 // Filtrera
