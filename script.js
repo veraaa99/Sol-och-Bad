@@ -108,10 +108,10 @@ function setupButtonListener() {
 setupButtonListener()
 
 function getSent() {
-  return sent; // Return the current value of sent
+  return sent;
 }
 
-module.exports = { setupButtonListener, getSent };
+// module.exports = { setupButtonListener, getSent };
 
 // Modal popup 
 const bookingBtn = document.querySelector('#bookingBtn');
