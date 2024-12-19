@@ -44,7 +44,7 @@ heartButtonsList.forEach(heart => {
 })
 
 // Export to test file
-module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
+// module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList}
 
 // Bokningsfunktion
 
@@ -101,10 +101,10 @@ function setupButtonListener() {
 setupButtonListener()
 
 function getSent() {
-  return sent; // Return the current value of sent
+  return sent;
 }
 
-module.exports = { setupButtonListener, getSent };
+// module.exports = { setupButtonListener, getSent };
 
 
 // Filtrera
