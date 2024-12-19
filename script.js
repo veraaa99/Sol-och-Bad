@@ -56,7 +56,7 @@ function checkHeartButtons() {
 checkHeartButtons()
 
 // Export to test file
-module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList, checkHeartButtons, hasAttributeBeenSet}
+// module.exports = {checkSavedTrips, showOrHideNotification, heartButtonsList, checkHeartButtons, hasAttributeBeenSet}
 
 // Formulär på frågesidan
 function displayThanks(document) {
