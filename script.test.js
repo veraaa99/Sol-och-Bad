@@ -1,4 +1,4 @@
-const {checkSavedTrips, showOrHideNotification, heartButtonsList} = require('./script')
+let {showOrHideNotification, checkHeartButtons, hasAttributeBeenSet} = require('./script')
 
 // Test if notification should be displayed or not
 describe('showOrHideNotification', function() {
@@ -8,6 +8,14 @@ describe('showOrHideNotification', function() {
     })
 })
 
+// Test if heart has not been clicked yet
+describe('checkHeartButtons',  function() {
+    it ('Should return false if heart has not been clicked yet', function() {
+        let isAttributeSet = hasAttributeBeenSet
+        checkHeartButtons()
+        expect(isAttributeSet).toBe(false)
+    })
+})
 
 const { setupButtonListener, getSent } = require('./script');
 
@@ -47,4 +55,3 @@ describe('test the sent variable', () => {
     expect(getSent()).toBe(true);
   });
 });
-
