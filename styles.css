@@ -134,11 +134,13 @@ p {
 }
 .slider-heading {
   background-color: #4241419f;
+  max-width: 25rem;
 }
 
 .slider-text {
   background-color: #4241419f;
   color: var(--clr-white);
+  max-width: 25rem;
 }
 
 .secondary-heading {
@@ -184,6 +186,10 @@ p {
 img { 
   width: 100%;
   display: block;
+}
+
+.cart {
+  max-width: 3.5rem;
 }
 
 .prick{
@@ -541,8 +547,7 @@ footer {
 .lightbox-btn {
   position: absolute;
 }
-.room-cards {
-}
+
 .room-cards__icon {
   width: 1.2rem;
   max-height: 1.2rem;
